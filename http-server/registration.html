@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        .form-container {
+            background-color: white;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 400px;
+            margin-right: 2rem;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"] {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+        .table-container {
+            margin-left: 2rem;
+            background-color: white;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 500px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registration Form</h2>
+    <form id="user-form">
+        <label for="name">Name</label>
+        <input required type="text" id="name" name="name" placeholder="Enter full name" required>
+
+        <label for="email">Email</label>
+        <input required type="email" id="email" name="email" placeholder="Enter email" required>
+
+        <label for="password">Password</label>
+        <input required type="password" id="password" name="password" placeholder="Enter password" required>
+
+        <label for="dob">Date of Birth</label>
+        <input required type="date" id="dob" name="dob" required>
+        <small style="color: grey;">You must be between 18 and 55 years old.</small>
+
+
+        <label for="acceptTerms">
+            <input type="checkbox" id="acceptTerms" name="acceptTerms"> Accept Terms & Conditions
+        </label>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+
+<div class="table-container">
+    <h2>User Entries</h2>
+    <div id="user-entries">
+        
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
