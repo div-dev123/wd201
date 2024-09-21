@@ -1,17 +1,30 @@
 {
   "dependencies": {
-    "minimist": "^1.2.8"
+    "minimist": "^1.2.8",
+    "sequelize": "^6.37.3"
   },
   "name": "todo-cli",
   "version": "1.0.0",
   "main": "todo.js",
   "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "eslint": "^9.10.0",
+    "eslint-plugin-jest": "^28.8.3",
+    "globals": "^15.9.0",
     "husky": "^8.0.0",
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3"
   },
   "scripts": {
     "test": "jest",
     "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write ."
+    ]
   },
   "author": "Divyansh Agrawal <divyanshagra18@gmail.com>",
   "license": "ISC",
